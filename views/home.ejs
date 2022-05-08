@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% posts.forEach((element)=>{ %>
+
+
+
+<h1><%= element.title %></h1>
+
+<% const truncatedString=element.content.slice(0,100); %>
+
+
+
+
+
+
+
+
+
+<p><%= truncatedString %> ....
+<a href= "http://localhost:3000/posts/<%= element.title %>" >Read More</a></p>
+<% }); %>
+
+
+
+
+
+
+<%- include('partials/footer'); -%>
